@@ -1,0 +1,180 @@
+
+/* GLOBAL */
+
+/* Reset / Normalize */
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+
+/* VARIABLES */
+:root {
+  /* Colors */
+  --color-white: #ffffff;
+  --link-hover-active: #FF6565;
+  --button-hover-active: 0.9;
+  --button-color: #FF6565;
+  --content-max-width: 1000px;
+
+  /* Fonts */
+  --font-family: "Source Sans Pro", sans-serif;
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
+  --font-size-small: 12px;
+  --font-size-medium: 14px;
+  --font-size-large: 16px;
+  --font-size-large: 32px;
+  --font-size-x-large: 42px;
+  --line-height-base: 26px;
+  --nav-item-margin: 0 0 0 2rem;
+}
+
+/* Header Section */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+  margin: unset;
+  font-family: var(--font-family);
+  font-size: var(--font-size-small);
+  color: var(--color-white);
+  background-color: black;
+  line-height: var(--line-height-base);
+}
+
+h1 {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+  margin: 0;
+}
+
+a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-active);
+  cursor: pointer;
+}
+
+button {
+  background-color: var(--button-color);
+  width: 162px;
+  height: 44px;
+  font-size: var(--font-size-medium);
+  color: var(--color-white);
+  line-height: 17px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: var(--button-hover-active);
+}
+
+
+.header .navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.header-logo {
+  height: 2.3rem;
+}
+.hamburger {
+  display: none !important;
+}
+.hamburger-container {
+  margin-left: 1rem;
+}
+.hamburger-container hr:nth-child(2) {
+  width: 1rem !important;
+  margin: 0;
+}
+.hamburger-line {
+  height: 0.2rem;
+  width: 1.7rem;
+  background-color:white;
+  border: none;
+  border-radius: 1rem;
+}
+.hamburger-container:nth-child(2) {
+  width: 1rem !important;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+.navbar > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding: 0rem;
+}
+li {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  margin: 0rem 0.5rem 0rem 0.5rem;
+}
+.section {
+  min-height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.section:nth-child(1) {
+  background-image: url("./images/headphones_hero_1.jpg");
+  background-size: auto 100%;
+  background-position-x: center;
+}
+
+/* Hero Content */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-content > h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Desktop / Large devices */
+@media only screen and (max-width: 992px) {
+
+}
+/* Tablet */
+@media only screen and (max-width: 767px) {
+
+}
+/* Mobile */
+@media only screen and (max-width: 480px) {
+  /* hide links */
+  .header-links {
+    display: none !important;
+  }
+  /* show hamburger */
+  .hamburger {
+    display: flex !important;
+    justify-content: flex-start !important;
+  }
+}
